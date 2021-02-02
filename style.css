@@ -1,0 +1,237 @@
+body {
+  background-color: whitesmoke;
+  font-family: 'Sarabun', sans-serif;
+}
+
+/* .accordion {
+  width: 100%;
+  max-width: 1000px;
+} */
+
+.accordion-item {
+  background-color: #fff;
+  color: black;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.accordion-item-header {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  min-height: 2.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 22px;
+  position: absolute;
+  right: 1rem;
+}
+
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.accordion-item-body-content {
+  line-height: 25px;
+  border-top: 1px solid #ccc;
+  /* border-image: linear-gradient(to right, transparent, #34495e, transparent) 1; */
+}
+
+.accordion-item-header.active+.accordion-item-body {
+  max-height: 100%;
+}
+
+@media(max-width: 767px) {
+  html {
+      font-size: 15px;
+  }
+}
+
+ul {
+  position: relative;
+  padding: 15px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+ul li:child {
+  border-bottom: none;
+}
+
+ul li label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+ul li label input {
+  visibility: hidden;
+  appearance: none;
+}
+
+ul li label p {
+  position: initial;
+  width: 90%;
+}
+
+ul li label span {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li label span::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  transform: rotate(-40deg);
+}
+
+ul li label input:checked~p {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+ul li label input:checked~span {
+  background: #03a9f4;
+  border: 1px solid #03a9f4;
+}
+
+ul li label input:checked~span::before {
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.card {
+  background-color: #fff;
+  color: black;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+.title {
+  /* padding: 0.5rem 3rem 0.5rem 1rem; */
+  padding: 5px;
+  min-height: 3rem;
+}
+
+table {
+  width: 100%;
+}
+
+.progressBar[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  /* Chrome / Safari / Opera */
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+
+  /* Get rid of default border in Firefox. */
+  border: none;
+
+  width: 100%;
+  height: 5px;
+}
+
+.progressBar[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.progressBar[value]::-moz-progress-bar {
+  background-color: #eee;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #03a9f4;
+  border-radius: 1rem;
+}
+
+#nav ul {
+  white-space: nowrap;
+  overflow-x: visible;
+  overflow-y: hidden;
+  /* added width so it would work in the snippet */
+  width: auto;
+  margin: 0 auto;
+}
+
+#nav li {
+  display: inline;
+  text-decoration: none;
+  color: #000;
+  /* line-height: 35px; */
+  padding-left: 30px;
+  padding-right: 30px;
+  border-bottom: hidden;
+}
+
+.bc {
+  background-color: #03a9f4;
+  border-radius: 3rem;
+}
+
+.header {
+  padding: 10px;
+  background: #fff;
+}
+
+.scrollmenu {
+  overflow: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.scrollmenu::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollmenu a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.scrollmenu a:hover {
+  background-color: cornflowerblue;
+  border-radius: 1rem;
+  color: white;
+}
+.scrollmenu a:focus {
+  background-color: while;
+  border-radius: 1rem;
+  color: white;
+}
